@@ -16,6 +16,9 @@ class Fabula  (val gs: StronaGry) {
             "miecz" -> miecz()
             "potwor" -> potwor()
             "pulapka" -> pulapka()
+            "stronaStartowa" -> gs.stronaStartowa()
+            "ucieczka" -> ucieczka()
+            "gameover" -> gameover()
         }
     }
 
@@ -79,6 +82,32 @@ class Fabula  (val gs: StronaGry) {
         nastepnyPunkt1 = "picie"
         nastepnyPunkt2 = "mycie"
         nastepnyPunkt3 = "punktStartowy"
+    }
+
+    fun ucieczka(){
+        gs.tlo.setBackgroundResource(R.drawable.ded)
+        gs.gameTextView.setText("Uciekajac potykasz się o kamień.\n\nPotwór dogania ciebie i zadaje cios.\n\nUmierasz")
+
+        gs.wyborButton1.setText("UMARŁEŚ")
+        gs.wyborButton2.setText("")
+        gs.wyborButton3.setText("")
+
+        nastepnyPunkt1 = "gameover"
+        nastepnyPunkt2 = "gameover"
+        nastepnyPunkt3 = "gameover"
+    }
+
+    fun gameover(){
+        gs.tlo.setBackgroundResource(R.drawable.blak)
+        gs.gameTextView.setText("Umarłeś!.\n\nTwoja przygoda tutaj się kończy.\n\nKONIEC GRY")
+
+        gs.wyborButton1.setText("Wróć do strony startowej")
+        gs.wyborButton2.setText("")
+        gs.wyborButton3.setText("")
+
+        nastepnyPunkt1 = "stronaStartowa"
+        nastepnyPunkt2 = "stronaStartowa"
+        nastepnyPunkt3 = "stronaStartowa"
     }
 
 

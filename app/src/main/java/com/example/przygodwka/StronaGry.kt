@@ -1,5 +1,6 @@
 package com.example.przygodwka
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_strona_gry.*
@@ -29,4 +30,9 @@ class StronaGry : AppCompatActivity() {
 
 
     }
+    fun stronaStartowa(){
+        val stronaS = Intent(this, MainActivity::class.java)
+        startActivity(stronaS)
+    }
+
 }
