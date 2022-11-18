@@ -1,5 +1,6 @@
 package com.example.przygodwka
 
+import android.view.View
 import kotlinx.android.synthetic.main.activity_strona_gry.*
 
 class Fabula  (val gs: StronaGry) {
@@ -13,6 +14,8 @@ class Fabula  (val gs: StronaGry) {
         when(punkt){
             "punktStartowy" -> punktStartowy()
             "miecz" -> miecz()
+            "potwor" -> potwor()
+            "pulapka" -> pulapka()
         }
     }
 
@@ -42,12 +45,40 @@ class Fabula  (val gs: StronaGry) {
         gs.wyborButton2.setText("Odpuść i idź dalej")
         gs.wyborButton3.setText("Wróć")
 
-        nastepnyPunkt1 = "potwor"
-        nastepnyPunkt2 = "pulapka"
+        nastepnyPunkt1 = "sukces"
+        nastepnyPunkt2 = "marsz"
         nastepnyPunkt3 = "punktStartowy"
 
 
 
+    }
+    fun potwor(){
+        gs.tlo.setBackgroundResource(R.drawable.potwor)
+        gs.gameTextView.setText("Natrafiasz na dziwną postać.\n\nŻle jej z oczu patrzy.\n\nSzybka decyzja, co robimy?")
+
+        gs.wyborButton1.setText("Atakuj")
+        gs.wyborButton2.setText("Uciekaj")
+        gs.wyborButton3.setText("")
+
+
+
+
+        nastepnyPunkt1 = "atak"
+        nastepnyPunkt2 = "ucieczka"
+        nastepnyPunkt3 = "punktStartowy"
+    }
+
+    fun pulapka(){
+        gs.tlo.setBackgroundResource(R.drawable.pulapka)
+        gs.gameTextView.setText("Znalazles źródełko wody po długim czasie.\n\nJesteś bardzo spragniony.\n\nCo robisz?")
+
+        gs.wyborButton1.setText("Bierzesz łyk wody")
+        gs.wyborButton2.setText("Wchodzisz cały do wody")
+        gs.wyborButton3.setText("Szukasz wyjścia")
+
+        nastepnyPunkt1 = "picie"
+        nastepnyPunkt2 = "mycie"
+        nastepnyPunkt3 = "punktStartowy"
     }
 
 
