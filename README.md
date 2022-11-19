@@ -1,6 +1,6 @@
 # Przygodowka
 
-Projekt na zaliczenie przedmiot8 Programowanie Aplikacji Mobilnych.
+Projekt na zaliczenie przedmiot  Programowanie Aplikacji Mobilnych.
 
 ## Prezentacja aplikacji
 
