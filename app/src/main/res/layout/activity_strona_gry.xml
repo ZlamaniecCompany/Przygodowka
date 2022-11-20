@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/gameTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#812E2B23"
             android:text="Obudziłeś się w ciemnej jaskinii, nie pamiętasz jak się tu znalazłeś. Twoja przygoda się zaczyna,"
